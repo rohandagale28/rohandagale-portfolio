@@ -3,7 +3,6 @@ import React, { useEffect, useState } from 'react'
 import './project.scss'
 import { Card } from './card'
 import Loading from './Loading'
-import axios from 'axios'
 
 const url = process.env.NEXT_PUBLIC_SERVER_URI;
 
@@ -13,12 +12,12 @@ export default function Projects() {
 
     useEffect(() => {
         async function getData() {
-            await axios.get(`${url}/project`)
+            const res = await fetch(`${url}/project`)
+                .then((res) => res.json())
                 .then((res) => {
-                    setData(res.data)
+                    setData(res)
                     setLoading(true)
-                }
-                )
+                })
         }
         getData()
     }, [])
