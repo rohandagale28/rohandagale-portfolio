@@ -1,15 +1,15 @@
 'use client'
 import React, { useEffect, useState } from 'react'
 import './project.scss'
-import axios from 'axios'
 import { Card } from './card'
 import Loading from './Loading'
+import axios from 'axios'
+
+const url = process.env.NEXT_PUBLIC_SERVER_URI;
 
 export default function Projects() {
     const [data, setData] = useState([])
     const [loading, setLoading] = useState(false)
-
-    const url = process.env.NEXT_PUBLIC_SERVER_URI
 
     useEffect(() => {
         async function getData() {
