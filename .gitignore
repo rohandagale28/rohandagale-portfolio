@@ -1,0 +1,8 @@
+#client
+/client/node_modules
+/client/.env.local
+/client/.eslintrc.json
+
+#server
+/server/node_modules
+/server/config.env

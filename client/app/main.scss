@@ -1,0 +1,30 @@
+@import "./variables.scss";
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: $backgroundColorPrimaryDark;
+    color: $fontColorPrimaryDark;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #141414;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(69, 69, 69, 0.6);
+    border-radius: 4rem;
+
+    &:hover {
+        background-color: rgba(69, 69, 69, 1);
+    }
+}

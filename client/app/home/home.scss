@@ -1,0 +1,70 @@
+@import "../variables.scss";
+
+.home-page {
+    .home-section {
+        @include flex-col;
+        height: 100vh;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        background: url("../assets/images/project-background.png");
+        background-size: 100%;
+        background-repeat: repeat;
+
+        .home-title {
+            font-size: $fontSizeLg;
+            padding: 1rem 0rem;
+            color: $fontColorPrimaryDark;
+            animation: swipe-up 0.8s ease-out;
+        }
+
+        .home-sub-title {
+            font-size: $fontSizeMd;
+            padding: 1rem 0rem;
+            color: #3ecfb2;
+            animation: swipe-up 0.8s ease-out;
+        }
+
+        .home-description {
+            font-size: $fontSizeSm;
+            width: 56%;
+            line-height: 1.4rem;
+            padding: 1rem 0rem;
+            text-align: center;
+            color: $fontColorSecondaryDark;
+            animation: swipe-up 0.8s ease-out;
+
+        }
+
+        .home-discord-button {
+            padding: 1rem;
+            box-sizing: border-box;
+
+            button {
+                padding: 0.5rem 1rem;
+                background: transparent;
+                outline: 2px solid $fontColorSecondaryDark;
+                border: none;
+                border-radius: 8px;
+                box-sizing: border-box;
+                cursor: pointer;
+
+                a {
+                    color: $fontColorPrimaryDark;
+                }
+            }
+        }
+    }
+}
+
+@keyframes swipe-up {
+    0% {
+        transform: translateY(20px);
+        opacity: 0%;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 100%;
+    }
+}

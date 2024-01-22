@@ -1,0 +1,82 @@
+@import "../variables.scss";
+
+.project-page {
+    background: url("../assets/images/project-background.png");
+    background-size: 100%;
+    background-repeat: repeat;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    flex-wrap: wrap;
+    min-height: 100vh;
+    height: auto;
+    width: 100%;
+    padding: 14rem 8rem;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid #282828;
+    box-sizing: border-box;
+    column-gap: 4rem;
+    row-gap: 6rem;
+}
+
+.project-card {
+    @include flex-col;
+    gap: 1rem;
+    height: auto;
+    width: auto;
+    padding: 1.4rem;
+    border-radius: 16px;
+    position: relative;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: 0.2s linear;
+    animation: swipe-up 0.8s ease-out;
+
+    &:hover {
+        background-color: $backgroundColorSecondaryDark;
+        transform: scale(102%);
+        transition: 0.2s linear;
+    }
+
+    .section-1 {
+        @include flex-row;
+        justify-content: space-between;
+
+        .title {
+            font-size: $fontSizeTitle;
+            color: $fontSizeTitle;
+        }
+
+        .logo {
+            @include flex-row;
+            gap: 0.8rem;
+        }
+    }
+
+    .section-2 {
+        font-size: $fontSizeSm;
+        color: $fontColorSecondaryDark;
+        line-height: 1.2rem;
+        text-align: justify;
+    }
+}
+
+@keyframes swipe-up {
+    0% {
+        transform: translateY(20px);
+        opacity: 0%;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 100%;
+    }
+}
+
+.loading-skeleton {
+    @include flex-row;
+    height: 100vh;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
