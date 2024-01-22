@@ -28,15 +28,18 @@ export default function Projects() {
                     <Loading />
                 </>
             ) : (
-                <div className="project-page">
-                    {data && data.map((item) => {
-                        return (
-                            <React.Fragment key={item._id}>
-                                <Card data={item} />
-                            </React.Fragment>
-                        )
-                    })}
-                </div >
+                <>
+                    <div className="project-page">
+                        {/* <div className="page-title">Project</div> */}
+                        {data && data.map((item) => {
+                            return (
+                                <React.Fragment key={item._id}>
+                                    <Card data={item} />
+                                </React.Fragment>
+                            )
+                        })}
+                    </div >
+                </>
             )}
         </>
     )

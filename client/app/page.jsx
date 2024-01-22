@@ -12,9 +12,9 @@ export default async function Home() {
         <Dashboard />
       </div>
       <div className="project-section">
-        {/* <Suspense fallback={<Loading />}>
+        <Suspense fallback={<Loading />}>
           <Projects />
-        </Suspense> */}
+        </Suspense>
       </div>
     </main>
   );

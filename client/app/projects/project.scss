@@ -1,5 +1,11 @@
 @import "../variables.scss";
 
+.page-title {
+    width: 100%;
+    text-align: center;
+    font-size: $fontSizeMd;
+}
+
 .project-page {
     background: url("../assets/images/project-background.png");
     background-size: 100%;
@@ -10,10 +16,10 @@
     min-height: 100vh;
     height: auto;
     width: 100%;
-    padding: 14rem 8rem;
+    padding: 12rem 8rem;
     justify-content: center;
     align-items: center;
-    border-top: 1px solid #282828;
+    // border-top: 1px solid #282828;
     box-sizing: border-box;
     column-gap: 4rem;
     row-gap: 6rem;
