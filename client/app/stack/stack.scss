@@ -1,0 +1,149 @@
+@import "../variables.scss";
+
+.stack-page {
+    background: url("../assets/images/project-background.png");
+    background-size: 100%;
+    background-repeat: repeat;
+    min-height: 100vh;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+
+    .stack-page-title {
+        padding-top: 10rem;
+        text-align: center;
+        font-size: $fontSizeTitle;
+        @include flex-row;
+        width: 100%;
+        justify-content: center;
+        gap: 0.8rem;
+        align-items: center;
+    }
+
+    .stack-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        flex-wrap: wrap;
+        width: 100%;
+        padding: 8rem 8rem;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+        column-gap: 2rem;
+        row-gap: 2rem;
+    }
+}
+
+a {
+    color: $fontColorPrimaryDark;
+    text-decoration: none;
+}
+
+.card {
+    @include flex-row;
+    width: auto;
+    height: 70px;
+    border-radius: 12px;
+    cursor: pointer;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+
+
+    @include sm {
+        width: 170px;
+        height: 60px;
+    }
+
+    @include md {
+        width: 170px;
+        height: 60px;
+    }
+
+    &:hover {
+        outline: 2px solid #28282840;
+        background-color: #282828;
+    }
+
+    .image {
+        height: auto;
+        width: 26px;
+
+        @include sm {
+            width: 22px;
+        }
+
+        @include md {
+            width: 22px;
+        }
+    }
+
+    .left {
+        padding-left: 16px;
+
+        @include sm {
+            padding-left: 12px;
+        }
+
+        @include md {
+            padding-left: 12px;
+        }
+    }
+
+    .right {
+        @include flex-col;
+        gap: 4px;
+        padding-left: 16px;
+        padding-right: 16px;
+        font-size: 1rem;
+
+
+
+
+        @include sm {
+            padding-left: 12px;
+            padding-right: 4px;
+        }
+
+        @include md {
+            padding-left: 12px;
+            padding-right: 4px;
+        }
+
+        :nth-child(1) {
+            font-size: 1rem;
+            text-transform: capitalize;
+
+            @include sm {
+                font-size: 0.9rem;
+                text-transform: capitalize;
+            }
+
+            @include md {
+                font-size: 0.9rem;
+                text-transform: capitalize;
+            }
+        }
+
+        :nth-child(2) {
+            font-size: 0.9rem;
+            color: $fontColorSecondaryDark;
+            text-transform: lowercase;
+
+            @include lg {
+                font-size: 0.9rem;
+                text-transform: lowercase;
+            }
+
+            @include sm {
+                font-size: 0.7rem;
+                text-transform: lowercase;
+            }
+
+            @include md {
+                font-size: 0.7rem;
+                text-transform: lowercase;
+            }
+        }
+    }
+}
