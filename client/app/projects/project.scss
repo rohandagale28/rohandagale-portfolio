@@ -1,56 +1,134 @@
 @import "../variables.scss";
 
-.page-title {
-    width: 100%;
-    text-align: center;
-    font-size: $fontSizeMd;
-}
-
 .project-page {
     background: url("../assets/images/project-background.png");
     background-size: 100%;
     background-repeat: repeat;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    flex-wrap: wrap;
     min-height: 100vh;
     height: auto;
-    width: 100%;
-    padding: 12rem 8rem;
     justify-content: center;
     align-items: center;
-    // border-top: 1px solid #282828;
-    box-sizing: border-box;
-    column-gap: 4rem;
-    row-gap: 6rem;
+
+    .project-page-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        flex-wrap: wrap;
+        width: 100%;
+        padding: 8rem 8rem;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+        column-gap: 4rem;
+        row-gap: 6rem;
+    }
+
+    .page-title-container {
+        @include flex-row;
+        justify-content: center;
+        align-items: center;
+        padding-top: 10rem;
+        gap: 0.8rem;
+
+        .project-page-title {
+            font-size: $fontSizeTitle;
+            text-align: center
+        }
+
+    }
+
+    .tooltip .tooltiptext {
+        visibility: hidden;
+        width: 120px;
+        background-color: #555;
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px 0;
+        position: absolute;
+        z-index: 1;
+        bottom: 125%;
+        left: 50%;
+        margin-left: -60px;
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+
+    .tooltip .tooltiptext::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: #555 transparent transparent transparent;
+    }
+
+    .tooltip:hover .tooltiptext {
+        visibility: visible;
+        opacity: 1;
+    }
 }
 
 .project-card {
     @include flex-col;
-    gap: 1rem;
-    height: auto;
+    gap: 1.2rem;
+    min-height: 10rem;
     width: auto;
     padding: 1.4rem;
-    border-radius: 16px;
+    border-radius: 10px;
     position: relative;
     box-sizing: border-box;
     cursor: pointer;
-    transition: 0.2s linear;
+    transition: 0.1s linear;
     animation: swipe-up 0.8s ease-out;
+    outline: 1px solid #404040;
+    background-color: $backgroundColorPrimaryDark;
+
 
     &:hover {
-        background-color: $backgroundColorSecondaryDark;
-        transform: scale(102%);
-        transition: 0.2s linear;
+        outline: 2px solid #999999;
     }
 
     .section-1 {
         @include flex-row;
         justify-content: space-between;
 
+        a {
+            color: $fontColorPrimaryDark
+        }
+
         .title {
+            @include flex-row;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
             font-size: $fontSizeTitle;
             color: $fontSizeTitle;
+            text-transform: capitalize;
+
+            &:hover {
+                color: $fontColorSecondaryDark;
+
+                image {
+                    fill: #32aaff;
+                }
+
+            }
+
+            &:hover {
+                .link {
+                    .link {
+                        fill: $fontColorSecondaryDark
+                    }
+                }
+            }
+
+            .link {
+                .link {
+                    fill: $fontColorPrimaryDark;
+                }
+            }
         }
 
         .logo {
@@ -62,8 +140,9 @@
     .section-2 {
         font-size: $fontSizeSm;
         color: $fontColorSecondaryDark;
-        line-height: 1.2rem;
-        text-align: justify;
+        line-height: 1.150rem;
+        // text-align: justify;
+        word-spacing: 2px;
     }
 }
 

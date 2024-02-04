@@ -11,7 +11,19 @@
     left: 0;
 
     .github-profile {
-        cursor: pointer;
+        a {
+            color: $fontColorPrimaryDark;
+        }
+
+        .github-profile-link {
+            @include flex-row;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            cursor: pointer;
+
+        }
+
     }
 
     .navlinks {

@@ -6,6 +6,7 @@ body {
     background-color: $backgroundColorPrimaryDark;
     color: $fontColorPrimaryDark;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 a {
@@ -27,4 +28,8 @@ a {
     &:hover {
         background-color: rgba(69, 69, 69, 1);
     }
+}
+
+.home-page {
+    scroll-behavior: smooth;
 }

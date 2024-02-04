@@ -12,8 +12,13 @@ export default function Navbar() {
     return (
         <main className="navbar">
             <div className="github-profile">
-                <a href="" target='_blank'>
-                    <Image src={githubLogo} alt='GitHub' />
+                <a href="" target='_blank' className='github-profile-link'>
+                    <div className="github-profile-logo">
+                        <Image src={githubLogo} alt='GitHub' />
+                    </div>
+                    <div className='github-profile-title'>
+                        GitHub
+                    </div>
                 </a>
             </div>
             <div className="navlinks">
